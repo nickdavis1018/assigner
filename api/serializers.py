@@ -5,7 +5,7 @@ from django.contrib.auth.models import User, Group
 class AssignmentSerializer(ModelSerializer):
     class Meta:
         model = Assignment
-        fields = ["id", "task", "assignee", "notes", "completed"]
+        fields = ["id", "task", "assignee", "notes", "completed", "urgency", "assigner", "overdue", "flagged"]
 
 class UserSerializer(HyperlinkedModelSerializer):
     class Meta:
